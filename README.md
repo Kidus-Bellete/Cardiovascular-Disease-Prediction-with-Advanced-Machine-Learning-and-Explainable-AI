@@ -178,15 +178,16 @@ tqdm>=4.62.0
 # Load the dataset
 df = pd.read_csv('path.csv')
 
-
-
-# run the Jupyter notebook
-jupyter notebook notebooks/01_EDA_Analysis.ipynb
+jupyter notebook notebooks/cardiovascular_XAI.ipynb
 ```
 
 #### **Step 2: Data Preprocessing**  
 ```python
 # Apply preprocessing pipeline
+
+# Scale features
+scaler = StandardScaler()
+scaler.fit_transform(df[continuous_variables])
 
 # Apply SMOTE for class balancing
 oversample = SMOTE(random_state=42)
@@ -206,7 +207,7 @@ rf_model = RandomForestClassifier(n_estimators=100, max_depth=5, random_state=42
 ```
 
 #### **Step 4: Model Evaluation**  
-
+```python
 
 ```
 
@@ -222,15 +223,12 @@ explainer = shap.TreeExplainer(rf_model)
 
 ```
 
----
+
 
 ### **Quick Start (All-in-One)**  
 ```python
-# Run the complete pipeline
-
-
-# Or use the Jupyter notebook
-jupyter notebook notebooks/Complete_Pipeline.ipynb
+#use the Jupyter notebook
+jupyter notebook notebooks/cardiovascular_XAI.ipynb
 ```
 
 
@@ -256,15 +254,6 @@ jupyter notebook notebooks/Complete_Pipeline.ipynb
 - Clinical implementation guidelines
 
 ---
-
-
-##  Contributing  
-
-
----
-
-## 10. License  
-
 
 
 
