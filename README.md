@@ -178,10 +178,9 @@ tqdm>=4.62.0
 # Load the dataset
 df = pd.read_csv('path.csv')
 
-# Run exploratory data analysis
-python scripts/01_exploratory_analysis.py
 
-# Or run the Jupyter notebook
+
+# run the Jupyter notebook
 jupyter notebook notebooks/01_EDA_Analysis.ipynb
 ```
 
@@ -197,31 +196,24 @@ X, y = oversample.fit_resample(X, y)
 #### **Step 3: Model Training**  
 ```python
 # Train Traditional ML Models
-python scripts/02_train_traditional_ml.py
+
 
 # Train Neural Networks
-python scripts/03_train_neural_networks.py
+
 
 # Example: Train Random Forest
 rf_model = RandomForestClassifier(n_estimators=100, max_depth=5, random_state=42)
 ```
 
 #### **Step 4: Model Evaluation**  
-```python
-# Comprehensive model evaluation
-python scripts/04_model_evaluation.py
 
-# Generate performance comparison
-python scripts/05_model_comparison.py
 
-# View results
-python scripts/06_results_visualization.py
 ```
 
 #### **Step 5: Explainable AI Analysis**  
 ```python
 # Run complete XAI pipeline
-python scripts/07_xai_analysis.py
+
 
 # Example: SHAP analysis
 import shap
@@ -235,7 +227,7 @@ explainer = shap.TreeExplainer(rf_model)
 ### **Quick Start (All-in-One)**  
 ```python
 # Run the complete pipeline
-python main.py
+
 
 # Or use the Jupyter notebook
 jupyter notebook notebooks/Complete_Pipeline.ipynb
