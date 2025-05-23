@@ -208,14 +208,12 @@ rf_model = RandomForestClassifier(n_estimators=100, max_depth=5, random_state=42
 
 #### **Step 4: Model Evaluation**  
 ```python
-
+def evaluate_model(model, model_name, X_train, y_train, X_test, y_test):
 ```
 
 #### **Step 5: Explainable AI Analysis**  
 ```python
 # Run complete XAI pipeline
-
-
 # Example: SHAP analysis
 import shap
 explainer = shap.TreeExplainer(rf_model)
@@ -230,10 +228,6 @@ explainer = shap.TreeExplainer(rf_model)
 #use the Jupyter notebook
 jupyter notebook notebooks/cardiovascular_XAI.ipynb
 ```
-
-
-
----
 
 ### **Expected Outputs**  
 
@@ -253,8 +247,6 @@ jupyter notebook notebooks/cardiovascular_XAI.ipynb
 - Model deployment recommendations
 - Clinical implementation guidelines
 
----
 
 
 
-⭐ **Star this repository if you find it helpful!** ⭐
